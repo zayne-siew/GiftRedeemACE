@@ -1,13 +1,5 @@
 {
     "dependencies": {
-        "@types/body-parser": "^1.19.5",
-        "@types/express": "^4.17.21",
-        "@types/node": "^20.11.17",
-        "body-parser": "^1.20.2",
-        "csv-parser": "^3.0.0",
-        "express": "^4.18.2",
-        "ts-node": "^10.9.2",
-        "tslog": "^4.9.2",
         "typescript": "^5.3.3"
     },
     "engines": {
@@ -16,13 +8,11 @@
     "name": "giftredeemace",
     "description": "Take-home assignment for GovTech GDS-ACE Internship Summer 2024",
     "version": "1.0.0",
-    "main": "index.ts",
+    "main": "",
     "scripts": {
-        "build": "tsc",
-        "start": "node --enable-source-maps --experimental-specifier-resolution=node index.js",
         "lint": "eslint --config .eslintrc.js --ignore-path .eslintignore --ext .js,.ts",
         "format": "prettier --config .prettierrc.json --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
-        "test": ""
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Zayne Siew",
     "license": "ISC",

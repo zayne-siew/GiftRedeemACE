@@ -1,0 +1,37 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/server.js",
+    "scripts": {
+        "build": "rimraf dist && tsc",
+        "preserve": "npm run build",
+        "serve": "cross-env NODE_ENV=development nodemon -q dist/server.js",
+        "prestart": "npm run build",
+        "start": "cross-env NODE_ENV=production node dist/server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "engines": {
+        "node": ">=16"
+    },
+    "author": "Zayne Siew",
+    "license": "ISC",
+    "dependencies": {
+        "@types/body-parser": "^1.19.5",
+        "@types/express": "^4.17.21",
+        "@types/node": "^20.11.19",
+        "async-mutex": "^0.4.1",
+        "body-parser": "^1.20.2",
+        "cross-env": "^7.0.3",
+        "csv-parser": "^3.0.0",
+        "dotenv": "^16.4.4",
+        "express": "^4.18.2",
+        "helmet": "^7.1.0",
+        "rimraf": "^5.0.5",
+        "tslog": "^4.9.2"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2",
+        "nodemon": "^3.0.3"
+    }
+}
