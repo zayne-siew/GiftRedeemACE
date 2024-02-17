@@ -1,3 +1,5 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, and run the linter on all source code files
+
 name: ESLint
 
 on:
@@ -13,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16, 17, 18, 19, 20, 21]
+        node-version: [16.x, 17.x, 18.x, 19.x, 20.x, 21.x]
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
