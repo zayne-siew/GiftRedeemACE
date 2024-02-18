@@ -40,15 +40,21 @@ function handleClick(): void {
     const port: number | string = 5500;
     const serverUrl: string = `http://127.0.0.1:${port}`;
 
-    const inputValue: string = (document.getElementById('inputField') as HTMLInputElement).value;
-    const messageLabel: HTMLElement | null = document.getElementById('messageLabel');
+    const inputValue: string = (
+        document.getElementById('inputField') as HTMLInputElement
+    ).value;
+    const messageLabel: HTMLElement | null =
+        document.getElementById('messageLabel');
 
     if (messageLabel === null) {
         // log.fatal(new Error('HTML label element not found!'));
         return;
     }
     (async () => {
-        messageLabel.textContent = await query(`${serverUrl}/redeem`, inputValue.trim());
+        messageLabel.textContent = await query(
+            `${serverUrl}/redeem`,
+            inputValue.trim()
+        );
     })();
 }
 

@@ -64,11 +64,16 @@ export function addStaff(staffDB: Map<string, Staff>, staff: Staff): void {
  * @param staffDB - Map of staff pass IDs to `Staff` objects
  * @param filePath - Filepath of CSV file to load
  */
-export function populateStaffDatabase(staffDB: Map<string, Staff>, filePath: string): void {
+export function populateStaffDatabase(
+    staffDB: Map<string, Staff>,
+    filePath: string
+): void {
     log.info('Populating staff database from CSV file');
 
     if (!existsSync(filePath)) {
-        log.error(`Specified filepath ${filePath} not found, database unpopulated`);
+        log.error(
+            `Specified filepath ${filePath} not found, database unpopulated`
+        );
         return;
     }
 
@@ -172,7 +177,10 @@ function main(): Express {
     // Initialise hash maps as local databases
     const redeemDB: Map<string, number> = new Map();
     const staffDB: Map<string, Staff> = new Map();
-    populateStaffDatabase(staffDB, '../assets/staff-id-to-team-mapping-long.csv');
+    populateStaffDatabase(
+        staffDB,
+        '../assets/staff-id-to-team-mapping-long.csv'
+    );
     log.trace(staffDB);
 
     const mutex: Mutex = new Mutex();

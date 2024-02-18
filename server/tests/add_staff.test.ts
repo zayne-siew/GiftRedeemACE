@@ -4,7 +4,7 @@ import app, { Staff, addStaff } from '../app';
 describe('Testing addStaff()', () => {
     const staffDB: Map<string, Staff> = new Map();
     let server: Server;
-    beforeAll(() => server = app.listen(3000));
+    beforeAll(() => (server = app.listen(3000)));
     afterEach(() => staffDB.clear());
     afterAll(() => server.close());
 

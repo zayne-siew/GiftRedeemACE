@@ -13,5 +13,5 @@ describe('Testing formatDate()', () => {
         const dateString: string = '18/02/2024 14:46:33';
 
         expect(formatDate(new Date(epoch))).toEqual(dateString);
-    })
+    });
 });
