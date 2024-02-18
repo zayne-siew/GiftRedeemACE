@@ -5,7 +5,7 @@
     "main": "dist/client.js",
     "scripts": {
         "build": "tsc",
-        "test": "jest --runInBand --detectOpenHandles --forceExit"
+        "test": "jest --runInBand --detectOpenHandles --forceExit --passWithNoTests"
     },
     "author": "Zayne Siew",
     "license": "ISC",

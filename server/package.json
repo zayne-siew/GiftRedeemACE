@@ -9,7 +9,7 @@
         "serve": "cross-env NODE_ENV=development nodemon -q dist/server.js",
         "prestart": "npm run build",
         "start": "cross-env NODE_ENV=production node dist/server.js",
-        "test": "jest --runInBand --detectOpenHandles --forceExit"
+        "test": "jest --runInBand --detectOpenHandles --forceExit --passWithNoTests"
     },
     "engines": {
         "node": ">=16"
