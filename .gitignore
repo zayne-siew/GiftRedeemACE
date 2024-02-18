@@ -132,3 +132,4 @@ dist
 
 # Virtual environment
 venv/
+.vscode/
